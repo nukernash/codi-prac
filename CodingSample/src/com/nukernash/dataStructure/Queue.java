@@ -1,6 +1,6 @@
-package interview.google;
+package com.nukernash.dataStructure;
 
-public class RodCutting {
+public class Queue {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

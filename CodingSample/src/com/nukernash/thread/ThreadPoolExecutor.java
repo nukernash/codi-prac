@@ -1,4 +1,4 @@
-package interview.thread;
+package com.nukernash.thread;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;

@@ -1,4 +1,4 @@
-package interview;
+package com.nukernash.problems;
 
 /*
  * Given an integer array, construct a bar graph and then fill with water. what amount of water can you store in the bar graph.

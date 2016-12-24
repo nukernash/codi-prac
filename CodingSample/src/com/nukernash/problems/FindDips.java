@@ -1,4 +1,4 @@
-package interview;
+package com.nukernash.problems;
 
 public class FindDips {
 

@@ -1,4 +1,4 @@
-package interview;
+package com.nukernash.problems;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

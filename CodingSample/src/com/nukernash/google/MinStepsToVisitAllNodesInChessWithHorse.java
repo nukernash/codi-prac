@@ -1,4 +1,4 @@
-package interview.google;
+package com.nukernash.google;
 
 /*
  * Return the minimum steps to visit all nodes in a chess board using a horse(knight)

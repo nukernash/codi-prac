@@ -1,4 +1,4 @@
-package interview.thread;
+package com.nukernash.thread;
 
 public class WorkerThread implements Runnable{
 	

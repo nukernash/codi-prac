@@ -1,4 +1,4 @@
-package interview;
+package com.nukernash.problems;
 
 /*
  * Given a string write a program to justify with right number of spaces in between 

@@ -1,4 +1,4 @@
-package interview.google;
+package com.nukernash.google;
 
 /*
  * Google question:

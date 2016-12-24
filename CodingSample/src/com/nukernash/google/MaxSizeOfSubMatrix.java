@@ -1,4 +1,4 @@
-package interview.google;
+package com.nukernash.google;
 
 /*
  * Given a 2d nXm array with 0's and 1's, return the max sub matrix (pXq) that has only 1's. 
