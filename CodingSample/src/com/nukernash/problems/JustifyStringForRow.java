@@ -37,20 +37,21 @@ public class JustifyStringForRow {
 	public static String getNextrow(String remainingStr, int limit){
 		int length;
 		String[] inputArr = remainingStr.split(" ");
-		while
+		
 		return "";
 	}
 	
 	public static String getrow(String[] strArr, int limit){
 		StringBuilder row = new StringBuilder();
-		int currLen;
+		int currLen=0;
 		for(String str : strArr){
 			if(currLen <= limit){
 				row.append(str).append(" ");
 				currLen += str.length();
 			}
 		}
-		int numberOfExtraSpaces = 
+		int numberOfExtraSpaces;
+		return "";
 	}
 
 }

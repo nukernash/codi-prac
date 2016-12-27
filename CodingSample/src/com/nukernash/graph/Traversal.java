@@ -11,7 +11,7 @@ public class Traversal {
 		
 	}
 	
-	public static void deplthFirstSearch(){
+	public static void depthFirstSearch(){
 		
 	}
 }
