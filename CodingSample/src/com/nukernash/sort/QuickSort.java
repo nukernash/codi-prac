@@ -31,7 +31,6 @@ public class QuickSort {
 		System.out.println("Step : " + Arrays.toString(intArr));
 		sort(intArr, start, wall-1);
 		sort(intArr, wall+1, end);
-		
 	}
 	
 	private static void swap(int[] intArr, int index1, int index2){
