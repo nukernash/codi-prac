@@ -1,4 +1,4 @@
-package com.nukernash.google;
+package com.nukernash.google.medium;
 
 /*
  * 	"dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"
