@@ -28,9 +28,9 @@ public class NumberOfIslands {
 	
 	private static final boolean  CONSIDER_CORNERS = false;
 	private static boolean[][] visited;
-	private static List<Set<Node>> islandList = new ArrayList<Set<Node>>();
 
 	public static int numIslands(char[][] grid) {
+		int count = 0;
 		if(grid.length == 0){
 			return 0;
 		}
@@ -41,50 +41,36 @@ public class NumberOfIslands {
 					visited[i][j] = true;
 					continue;
 				}else if(grid[i][j] == '1'){
-					Set<Node> island = new HashSet<Node>();
-					island.add(new Node(i, j));
-					islandList.add(island);
-					bfs(i, j, grid, island);
+					count++;
+					bfs(i, j, grid);
 				}else{
 					return 0;
 				}
 				visited[i][j] = true;
 			}
 		}
-		System.out.println(islandList);
-		return islandList.size();
+		return count;
     }
 	
-	private static void bfs(int i, int j, char[][] grid, Set<Node> island){
+	private static void bfs(int i, int j, char[][] grid){
 		Queue<Node> queue = new LinkedList<Node>();
 		queue.add(new Node(i, j));
 		while(!queue.isEmpty()){
 			Node currentNode = queue.poll();
-			Set<Node>  neigboursThatAreOne =  getNeighboursThatAreOne(grid, currentNode.i, currentNode.j);
-			for(Node node : neigboursThatAreOne){
+			Set<String>  neigboursThatAreOne =  getNeighboursThatAreOne(grid, currentNode.i, currentNode.j);
+			for(String nodeStr : neigboursThatAreOne){
+				Node node = Node.getValueOf(nodeStr);
 				if(!visited[node.i][node.j]){
 					visited[node.i][node.j] = true;
-					island.addAll(neigboursThatAreOne);
 					queue.add(node);
 				}
 			}
 		}
 	}
 	
-	private static Set<Node> isPartOfAnExistingIsland(int i, int j){
-		for(Set<Node> island : islandList){
-			for(Node node : island){
-				if(node.i == i && node.j == j){
-					return island;
-				}
-			}
-		}
-		return null;
-	}
-	
-	public static Set<Node> getNeighboursThatAreOne(char[][] grid, int x, int y){
+	public static Set<String> getNeighboursThatAreOne(char[][] grid, int x, int y){
 		
-		Set<Node> neighbors = new HashSet<Node>();
+		Set<String> neighbors = new HashSet<String>();
 	    for (int xx = -1; xx <= 1; xx++) {
 	        for (int yy = -1; yy <= 1; yy++) {
 	            if (xx == 0 && yy == 0) {
@@ -95,7 +81,7 @@ public class NumberOfIslands {
 	            }
 	            if (isOnMap(x + xx, y + yy, grid)) {
 	            	if(grid[x + xx][y + yy] == '1'){
-	            		neighbors.add(new Node(x + xx, y + yy));
+	            		neighbors.add(new Node(x + xx, y + yy).toString());
 	            	}
 	            }
 	        }
@@ -122,5 +108,11 @@ class Node{
 	@Override
 	public String toString(){
 		return "[" + i + "," + j + "]";
+	}
+	
+	public static Node getValueOf(String node){
+		String s = node.substring(1, node.length()-1);
+		String[] index = s.split(",");
+		return new Node(Integer.valueOf(index[0]), Integer.valueOf(index[1]));
 	}
 }
