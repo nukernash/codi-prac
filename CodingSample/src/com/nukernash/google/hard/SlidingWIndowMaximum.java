@@ -32,5 +32,10 @@ public class SlidingWIndowMaximum {
 		// TODO Auto-generated method stub
 
 	}
+	
+	public int[] maxSlidingWindow(int[] nums, int k) {
+    
+		return null;
+    }
 
 }
