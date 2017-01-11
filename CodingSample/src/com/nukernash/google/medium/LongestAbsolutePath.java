@@ -34,7 +34,7 @@ public class LongestAbsolutePath {
 	
 	public static int lengthLongestPath(String input) {
 		String prefix;
-		int maxFilePath;
+		int maxFilePath =0;
 		int currlevel = 0;
 		int tabCount = 0;
 		StringBuffer currName = new StringBuffer();
@@ -54,7 +54,7 @@ public class LongestAbsolutePath {
 			}else{
 				if(tabCount != 0){
 					if(tabCount < currlevel){
-						prefix = prefix.substring(beginIndex, endIndex)
+						//prefix = prefix.substring(beginIndex, endIndex)
 					}
 					currlevel = tabCount;
 					tabCount = 0;
@@ -68,6 +68,9 @@ public class LongestAbsolutePath {
 	
 	public static String getPrefix(Stack stack, int level){
 		String prefix = "";
-		while(!stack.isEmpty())
+		while(!stack.isEmpty()){
+			
+		}
+		return prefix;
 	}
 }
